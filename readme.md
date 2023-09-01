@@ -7,6 +7,13 @@
 - Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare
   nome e immagine di ogni contatto
 
+## SVOLGIMENTO
+
+- creo la mia grafica come da screenshot
+- applico 2 classi diverse per i messaggi miei e dell'iterlocutore
+- la creazione del contatti nella lista sarà gestita da un _v-for_
+  - ogni contatto avrà: nome e testo collegati a lla mia lista
+
 **Milestone 2**
 
 - Visualizzazione dinamica dei messaggi: tramite la direttiva v-for, visualizzare tutti i
