@@ -8,3 +8,80 @@
 /* UTILS */
 
 /* STRUCTURE */
+.wrapper {
+  height: 100vh;
+  background-image: url(../img/mine.jpg);
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 100%;
+  height: 1000px;
+  background-color: white;
+  display: flex;
+}
+
+/* SLIDER */
+.slider {
+  width: 40%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.slider .header-slider {
+  height: 100px;
+  width: 100%;
+  background-color: aqua;
+}
+
+.slider .information {
+  height: 100px;
+  width: 100%;
+  background-color: beige;
+}
+
+.slider .search-bar {
+  height: 75px;
+  width: 100%;
+  background-color: lavenderblush;
+}
+.slider .contacts {
+  height: calc(100% - 275px);
+  width: 100%;
+  background-color: lightgreen;
+}
+
+/* MAIN-APP */
+.main-app {
+  width: 60%;
+  height: 100%;
+  border: 1px solid black;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-app .header-main {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(0, 92, 92);
+}
+
+.main-app .main-jumbo {
+  height: calc(100% - 200px);
+  width: 100%;
+  background-color: blueviolet;
+}
+
+.main-app .input-bar {
+  height: 100px;
+  width: 100%;
+  background-color: lightslategray;
+}
