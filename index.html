@@ -27,15 +27,60 @@
       <div class="container">
         <main>
           <div class="slider">
-            <div class="header-slider"></div>
+            <div class="header-slider">
+              <div class="user-picture">
+                <img :src="myContacts.avatar" alt="" />
+              </div>
+              <h3>{{ myContacts.name }}</h3>
+            </div>
             <div class="information"></div>
-            <div class="search-bar"></div>
-            <div class="contacts"></div>
+            <div class="search-bar">
+              <div class="input-group">
+                <button
+                  class="btn btn-outline-secondary"
+                  type="button"
+                  id="button-addon1"
+                >
+                  Button
+                </button>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder=""
+                  aria-label="Example text with button addon"
+                  aria-describedby="button-addon1"
+                />
+              </div>
+            </div>
+            <div class="contacts">
+              <div
+                v-for="(user, index) in contacts"
+                @click="selectContact(index)"
+                class="contact"
+              >
+                <div class="user-picture">
+                  <img :src="user.avatar" alt="" />
+                </div>
+                <h3>{{ user.name }}</h3>
+              </div>
+            </div>
           </div>
           <div class="main-app">
-            <div class="header-main"></div>
+            <div class="header-main">
+              <div class="user-picture">
+                <img :src="contacts[activeContact].avatar" alt="" />
+              </div>
+              <h3>{{ contacts[activeContact].name }}</h3>
+            </div>
             <div class="main-jumbo"></div>
-            <div class="input-bar"></div>
+            <div class="input-bar">
+              <input
+                class="form-control"
+                type="text"
+                value="Readonly input here..."
+                aria-label="readonly input example"
+              />
+            </div>
           </div>
         </main>
       </div>
