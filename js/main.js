@@ -171,6 +171,11 @@ createApp({
       title: "title vue",
       contacts,
       activeContact: 0,
+      newMessage: {
+        date: "",
+        message: "",
+        status: "sent",
+      },
       myContacts: {
         name: "Sofia",
         avatar: "./img/avatar_io.jpg",
@@ -181,8 +186,16 @@ createApp({
     selectContact(index) {
       this.activeContact = index;
     },
-    checkStatus(activeContact, index) {
-      console.log(this.contacts[activeContact].messages[index].status);
+    addNewMessage(newMessage, activeContact) {
+      const newMessageCopy = {
+        date: "",
+        message: newMessage.message,
+        status: "sent",
+      };
+
+      this.contacts[activeContact].messages.push(newMessageCopy);
+
+      this.newMessage.message = "";
     },
   },
 }).mount("#app");

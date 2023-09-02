@@ -98,6 +98,8 @@
                 type="text"
                 placeholder="Scrivi un messaggio"
                 aria-label="readonly input example"
+                v-model="newMessage.message"
+                @keyup.enter="addNewMessage(newMessage,activeContact)"
               />
             </div>
           </div>
