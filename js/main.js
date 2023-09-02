@@ -181,5 +181,8 @@ createApp({
     selectContact(index) {
       this.activeContact = index;
     },
+    checkStatus(activeContact, index) {
+      console.log(this.contacts[activeContact].messages[index].status);
+    },
   },
 }).mount("#app");

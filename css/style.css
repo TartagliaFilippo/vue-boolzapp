@@ -1,3 +1,15 @@
+/* PALETTE COLIRI */
+:root {
+  --darkgreen: #009688;
+  --grey: #dcdbd2;
+  --greyheader: #eaeaea;
+  --darkgrey: #b1b1b1;
+  --white: #ffffff;
+  --blue: #8edafc;
+  --greenmessage: #d5f9ba;
+  --black: #0e0e0e;
+}
+
 /* GENERICS */
 * {
   box-sizing: border-box;
@@ -26,10 +38,28 @@ img {
   overflow: hidden;
 }
 
+.send-message {
+  width: 30%;
+  min-height: 30px;
+  background-color: var(--greenmessage);
+  padding: 5px;
+
+  align-self: flex-end;
+}
+
+.received-message {
+  width: 30%;
+  min-height: 30px;
+  background-color: var(--white);
+  padding: 5px;
+
+  align-self: flex-start;
+}
+
 /* STRUCTURE */
 .wrapper {
   height: 100vh;
-  background-image: url(../img/mine.jpg);
+  background-color: var(--grey);
 }
 
 .container {
@@ -73,7 +103,11 @@ main {
   height: 75px;
   width: 100%;
   background-color: lavenderblush;
+
+  display: flex;
+  align-items: center;
 }
+
 .slider .contacts {
   height: calc(100% - 275px);
   width: 100%;
@@ -104,7 +138,7 @@ main {
 .main-app .header-main {
   height: 100px;
   width: 100%;
-  background-color: rgb(0, 92, 92);
+  background-color: blueviolet;
 
   display: flex;
   flex-direction: row;
@@ -114,11 +148,19 @@ main {
 .main-app .main-jumbo {
   height: calc(100% - 200px);
   width: 100%;
-  background-color: blueviolet;
+  background-image: url(../img/mine.jpg);
+}
+
+.main-app .main-jumbo .container-messages {
+  display: flex;
+  flex-direction: column;
 }
 
 .main-app .input-bar {
   height: 100px;
   width: 100%;
   background-color: lightslategray;
+
+  display: flex;
+  align-items: center;
 }

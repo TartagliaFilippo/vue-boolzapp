@@ -46,7 +46,7 @@
                 <input
                   type="text"
                   class="form-control"
-                  placeholder=""
+                  placeholder="Cerca o inizia una nuova chat"
                   aria-label="Example text with button addon"
                   aria-describedby="button-addon1"
                 />
@@ -72,12 +72,31 @@
               </div>
               <h3>{{ contacts[activeContact].name }}</h3>
             </div>
-            <div class="main-jumbo"></div>
+            <div class="main-jumbo">
+              <div
+                v-for="(message, index) in contacts[activeContact].messages"
+                class="container-messages"
+              >
+                <div class="send-message" v-if="message.status == 'sent'">
+                  <span>
+                    {{ contacts[activeContact].messages[index].message }}
+                  </span>
+                </div>
+                <div
+                  v-else-if="message.status == 'received'"
+                  class="received-message"
+                >
+                  <span>
+                    {{ contacts[activeContact].messages[index].message }}
+                  </span>
+                </div>
+              </div>
+            </div>
             <div class="input-bar">
               <input
                 class="form-control"
                 type="text"
-                value="Readonly input here..."
+                placeholder="Scrivi un messaggio"
                 aria-label="readonly input example"
               />
             </div>
