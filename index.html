@@ -99,7 +99,7 @@
                 placeholder="Scrivi un messaggio"
                 aria-label="readonly input example"
                 v-model="newMessage.message"
-                @keyup.enter="addNewMessage(newMessage,activeContact)"
+                @keyup.enter="addNewMessage(newMessage,activeContact),timerRecived()"
               />
             </div>
           </div>

@@ -186,6 +186,7 @@ createApp({
     selectContact(index) {
       this.activeContact = index;
     },
+
     addNewMessage(newMessage, activeContact) {
       const newMessageCopy = {
         date: "",
@@ -196,6 +197,23 @@ createApp({
       this.contacts[activeContact].messages.push(newMessageCopy);
 
       this.newMessage.message = "";
+    },
+
+    addReceivedMessage(activeContact) {
+      const newReceivedMessage = {
+        date: "",
+        message: "ok",
+        status: "received",
+      };
+
+      this.contacts[activeContact].messages.push(newReceivedMessage);
+    },
+
+    timerRecived() {
+      setTimeout(() => {
+        const activeContact = this.activeContact;
+        this.addReceivedMessage(activeContact);
+      }, 1000);
     },
   },
 }).mount("#app");
