@@ -30,6 +30,16 @@ img {
   width: 100%;
 }
 
+.header-items {
+  font-size: 30px;
+  padding-right: 20px;
+}
+
+.header-items i {
+  color: var(--darkgrey);
+  padding: 10px;
+}
+
 .user-picture {
   height: 75px;
   width: 75px;
@@ -38,28 +48,60 @@ img {
   overflow: hidden;
 }
 
+.text-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.text-contact p {
+  margin: 0;
+  color: #a7a5a5;
+}
+
+.clock-contact {
+  margin-left: auto;
+  padding-right: 20px;
+  color: #a7a5a5;
+  font-size: 14px;
+}
+
 .send-message {
-  width: 30%;
+  width: 40%;
   min-height: 30px;
   background-color: var(--greenmessage);
-  padding: 5px;
+  padding: 10px;
+  border-radius: 5px;
 
   align-self: flex-end;
 }
 
 .received-message {
-  width: 30%;
+  width: 40%;
   min-height: 30px;
   background-color: var(--white);
-  padding: 5px;
+  padding: 10px;
+  border-radius: 5px;
 
   align-self: flex-start;
+}
+
+.input-items {
+  padding: 0 30px;
+}
+
+.input-items i {
+  font-size: 30px;
+  color: #737373;
 }
 
 /* STRUCTURE */
 .wrapper {
   height: 100vh;
-  background-color: var(--grey);
+  background-image: linear-gradient(
+    to bottom,
+    var(--darkgreen) 20%,
+    var(--grey) 20%
+  );
 }
 
 .container {
@@ -80,38 +122,75 @@ main {
 .slider {
   width: 40%;
   height: 100%;
-  border: 1px solid black;
+  border-right: 1px solid lightgray;
 }
 
 .slider .header-slider {
   height: 100px;
   width: 100%;
-  background-color: aqua;
+  background-color: var(--greyheader);
 
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
 }
 
 .slider .information {
   height: 100px;
   width: 100%;
-  background-color: beige;
-}
-
-.slider .search-bar {
-  height: 75px;
-  width: 100%;
-  background-color: lavenderblush;
+  background-color: var(--blue);
 
   display: flex;
   align-items: center;
 }
 
+.slider .information .container-bell {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin: 10px;
+  overflow: hidden;
+  background-color: var(--white);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-bell i {
+  font-size: 28px;
+  color: var(--blue);
+}
+
+.information .text-information h4 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3b3b3b;
+}
+
+.information .text-information a {
+  color: #727272;
+}
+
+.slider .search-bar {
+  height: 75px;
+  width: 100%;
+  background-color: #fafafa;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .search-bar .input-group {
+  width: 95%;
+}
+
 .slider .contacts {
   height: calc(100% - 275px);
   width: 100%;
-  background-color: lightgreen;
+  background-color: var(--white);
   overflow: auto;
 
   display: flex;
@@ -119,16 +198,21 @@ main {
 }
 
 .slider .contacts .contact {
+  border-bottom: 1px solid #e5e4e4;
+
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.contact:hover {
+  background-color: rgb(232, 231, 231);
 }
 
 /* MAIN-APP */
 .main-app {
   width: 60%;
   height: 100%;
-  border: 1px solid black;
 
   display: flex;
   flex-direction: column;
@@ -138,29 +222,42 @@ main {
 .main-app .header-main {
   height: 100px;
   width: 100%;
-  background-color: blueviolet;
+  background-color: var(--greyheader);
 
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+}
+
+.header-main div .text-contact p {
+  color: #605e5e;
 }
 
 .main-app .main-jumbo {
   height: calc(100% - 200px);
   width: 100%;
   background-image: url(../img/mine.jpg);
+  padding: 0 40px;
 }
 
 .main-app .main-jumbo .container-messages {
   display: flex;
   flex-direction: column;
+
+  margin: 25px 0;
 }
 
 .main-app .input-bar {
   height: 100px;
   width: 100%;
-  background-color: lightslategray;
+  background-color: var(--greyheader);
 
   display: flex;
   align-items: center;
+}
+
+.main-app .input-bar input {
+  height: 70%;
+  font-size: 20px;
 }

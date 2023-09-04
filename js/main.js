@@ -171,6 +171,8 @@ createApp({
       title: "title vue",
       contacts,
       activeContact: 0,
+      searchContact: "",
+      filterContacts: [],
       newMessage: {
         date: "",
         message: "",
@@ -214,6 +216,16 @@ createApp({
         const activeContact = this.activeContact;
         this.addReceivedMessage(activeContact);
       }, 1000);
+    },
+
+    searchUser(filterContacts, searchContact) {
+      this.filterContacts = this.contacts.filter((users) => {
+        if (users.name.toLowerCase().includes(searchContact.toLowerCase())) {
+          return true;
+        } else {
+          return false;
+        }
+      });
     },
   },
 }).mount("#app");
