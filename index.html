@@ -63,7 +63,7 @@
                   class="btn btn-outline-secondary"
                   type="button"
                   id="button-addon1"
-                  @click="searchUser(filterContacts,searchContact)"
+                  @click="searchUser(filterContacts, searchContact)"
                 >
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
@@ -79,7 +79,7 @@
             </div>
             <div class="contacts">
               <div
-                v-for="(user, index) in contacts"
+                v-for="(user, index) in filterContacts"
                 @click="selectContact(index)"
                 class="contact"
               >
@@ -100,10 +100,10 @@
             <div class="header-main">
               <div class="d-flex align-items-center">
                 <div class="user-picture">
-                  <img :src="contacts[activeContact].avatar" alt="" />
+                  <img :src="filterContacts[activeContact].avatar" alt="" />
                 </div>
                 <div class="text-contact">
-                  <h3>{{ contacts[activeContact].name }}</h3>
+                  <h3>{{ filterContacts[activeContact].name }}</h3>
                   <p>Ultimo accesso oggi alle 12.00</p>
                 </div>
               </div>

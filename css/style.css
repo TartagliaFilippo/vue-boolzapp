@@ -69,6 +69,7 @@ img {
   width: 40%;
   min-height: 30px;
   background-color: var(--greenmessage);
+  font-size: 20px;
   padding: 10px;
   border-radius: 5px;
 
@@ -79,6 +80,7 @@ img {
   width: 40%;
   min-height: 30px;
   background-color: var(--white);
+  font-size: 20px;
   padding: 10px;
   border-radius: 5px;
 
@@ -185,6 +187,15 @@ main {
 
 .slider .search-bar .input-group {
   width: 95%;
+  height: 65%;
+}
+
+.input-group button {
+  width: 90px;
+}
+
+.input-group input {
+  font-size: 20px;
 }
 
 .slider .contacts {
@@ -192,6 +203,7 @@ main {
   width: 100%;
   background-color: var(--white);
   overflow: auto;
+  cursor: pointer;
 
   display: flex;
   flex-direction: column;
@@ -239,6 +251,7 @@ main {
   width: 100%;
   background-image: url(../img/mine.jpg);
   padding: 0 40px;
+  overflow: auto;
 }
 
 .main-app .main-jumbo .container-messages {

@@ -172,7 +172,16 @@ createApp({
       contacts,
       activeContact: 0,
       searchContact: "",
-      filterContacts: [],
+      filterContacts: [
+        contacts[0],
+        contacts[1],
+        contacts[2],
+        contacts[3],
+        contacts[4],
+        contacts[5],
+        contacts[6],
+        contacts[7],
+      ],
       newMessage: {
         date: "",
         message: "",
@@ -219,13 +228,29 @@ createApp({
     },
 
     searchUser(filterContacts, searchContact) {
-      this.filterContacts = this.contacts.filter((users) => {
+      // svuoto l'array se ha degli alementi
+      if (this.filterContacts.length > 0) {
+        this.filterContacts.splice(0, this.filterContacts.length);
+      }
+
+      // filtro il mio array
+      const myFilterArray = this.contacts.filter((users) => {
         if (users.name.toLowerCase().includes(searchContact.toLowerCase())) {
           return true;
         } else {
           return false;
         }
       });
+
+      // pusho i valori filtrari nel mio array data
+      for (const contact of myFilterArray) {
+        filterContacts.push(contact);
+      }
+
+      // svuto l'input
+      this.searchContact = "";
+
+      return filterContacts;
     },
   },
 }).mount("#app");
