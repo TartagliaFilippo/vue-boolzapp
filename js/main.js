@@ -163,6 +163,9 @@ const contacts = [
   },
 ];
 
+// collego luxon
+let DateTime = luxon.DateTime;
+
 const { createApp } = Vue;
 
 createApp({
