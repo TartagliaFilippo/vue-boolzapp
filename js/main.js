@@ -262,8 +262,14 @@ createApp({
       hiddenMenu.classList.toggle("d-none");
     },
 
-    removeMessage(index) {
-      contacts[activeContact].messages.splice(index, 1);
+    removeMessage(index, activeContact, contacts) {
+      const messageCopyDelete = {
+        date: "",
+        message: `il messaggio è stato eliminato`,
+        status: "sent",
+      };
+
+      contacts[activeContact].messages.splice(index, 1, messageCopyDelete);
     },
   },
 }).mount("#app");
