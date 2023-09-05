@@ -118,10 +118,18 @@
                 v-for="(message, index) in contacts[activeContact].messages"
                 class="container-messages"
               >
-                <div class="send-message" v-if="message.status == 'sent'">
+                <div
+                  class="send-message"
+                  v-if="message.status == 'sent'"
+                  @click="removeDisplayNone(index)"
+                >
                   <span>
                     {{ contacts[activeContact].messages[index].message }}
                   </span>
+                  <div class="delete-message d-none">
+                    <div>Message info</div>
+                    <div @click="deleteMessage(index)">Delete message</div>
+                  </div>
                 </div>
                 <div
                   v-else-if="message.status == 'received'"

@@ -252,5 +252,15 @@ createApp({
 
       return filterContacts;
     },
+
+    removeDisplayNone(index) {
+      const hiddenMenu =
+        document.getElementsByClassName("delete-message")[index];
+      hiddenMenu.classList.toggle("d-none");
+    },
+
+    removeMessage(index) {
+      contacts[activeContact].messages.splice(index, 1);
+    },
   },
 }).mount("#app");

@@ -259,6 +259,33 @@ main {
   flex-direction: column;
 
   margin: 25px 0;
+  position: relative;
+}
+
+.delete-message {
+  width: 180px;
+  height: 75px;
+  position: absolute;
+  background-color: var(--white);
+  z-index: 2;
+  top: 35px;
+  right: 60px;
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.delete-message div:first-child {
+  border-bottom: 1px solid lightgray;
+}
+
+.delete-message div {
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
 
 .main-app .input-bar {
